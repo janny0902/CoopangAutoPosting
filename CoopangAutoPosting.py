@@ -17,7 +17,8 @@ SECRET_KEY = "6e872465260407a2c910010a690de8fe9f0dd948"
 
 REQUEST = { "coupangUrls": [
     "https://www.coupang.com/np/search?component=&q=good&channel=user", 
-    "https://www.coupang.com/np/coupangglobal"
+    "https://www.coupang.com/np/coupangglobal",
+    "https://api-gateway.coupang.com/v2/providers/affiliate_open_api/apis/openapi"
 ]}
 
 
@@ -35,7 +36,7 @@ def generateHmac(method, url, secretKey, accessKey):
 
 
 authorization = generateHmac(REQUEST_METHOD, URL, SECRET_KEY, ACCESS_KEY)
-url = "{}{}".format(DOMAIN, URL)
+url = "{}{}{}".format(DOMAIN, URL,"/products/coupangPL?limit=50")
 resposne = requests.request(method=REQUEST_METHOD, url=url,
                             headers={
                                 "Authorization": authorization,
