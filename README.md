@@ -1,6 +1,6 @@
 # CoopangAutoPosting
 
-   # 크롬 111v적용 기능 일부 수정 2023/4/2
+   - 크롬 111v적용 기능 일부 수정 2023/4/2
 ## 쿠팡 매니저 자동 광고 API
 
 
@@ -13,6 +13,10 @@
 ## 쿠팡 매니저 자동광고 API V2
  - ChatGPT 3.5 API 적용 자동 게시물CONTENT를 생성
  - CONTENT 내용 분할하여 HTML 형태로 작성함. CSS 적용 가능 형태로 게시 완료
+ - 
+## ChatGPT API KEY
+ - 시스템 함수에 저장하여 사용함. 
+ - Import os 추가
 
     # TODO
     - 게시물 내용에 CSS 적용 하기
